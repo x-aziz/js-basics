@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script src="Level03.js">
+    function userIdGeneratedByUser1() {
+      let length = parseInt(prompt("Enter the number of characters:"));
+      let count = parseInt(prompt("Enter the number of ids:"));
+      let result = "";
+      const characters =
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+      for (let i = 0; i < count; i++) {
+        for (let j = 0; j < length; j++) {
+          result += characters.charAt(
+            Math.floor(Math.random() * characters.length)
+          );
+        }
+        result += "\n";
+      }
+      console.log(result);
+    }
+    userIdGeneratedByUser1();
+  </script>
+</html>
